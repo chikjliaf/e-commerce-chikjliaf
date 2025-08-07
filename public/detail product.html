@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detail Product</title>
+  <link href="../dist/output.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f9efec] text-[#6b3030] min-h-screen flex flex-col">
+
+  <nav class="bg-[#f9efec] p-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="home.html" class="text-2xl font-bold text-[#6b3030]">matchiww</a>
+      <div class="ml-4 flex items-center gap-4">
+        <a href="keranjang.html" class="relative block">
+          <img src="/foto/keranjang.png" alt="Cart" class="w-6 h-6" />
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-1.5">0</span>
+        </a>
+        <a href="profile.html" class="w-8 h-8 rounded-full overflow-hidden border-2 border-[#6b3030]">
+          <img src="/foto/profile.png" alt="Profil" class="w-full h-full object-cover" />
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow">
+    <div class="max-w-4xl mx-auto px-6 py-12">
+      <div id="detail-container" class="flex flex-col md:flex-row gap-10 items-center bg-white p-6 rounded-xl shadow-md">
+      </div>
+    </div>
+  </main>
+
+  <div id="checkout-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-lg max-w-md w-full text-[#6b3030]">
+      <h2 class="text-2xl font-semibold mb-4">Konfirmasi Pembelian</h2>
+      <p class="mb-4" id="checkout-summary">Total belanja Anda: Rp0</p>
+      <div class="flex justify-end gap-4">
+        <button id="cancel-btn" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Batal</button>
+        <button id="confirm-btn" class="px-4 py-2 bg-[#e3c2b1] text-white rounded hover:bg-[#d1ab97]">Konfirmasi</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup-order-summary" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-xl w-full max-w-2xl relative shadow-lg">
+      <button onclick="togglePopup()" class="absolute top-2 right-2 text-gray-600 hover:text-black text-xl">&times;</button>
+      <h2 class="text-xl font-bold text-[#6b3030] mb-6">Order Summary</h2>
+      <div class="flex items-center justify-between px-4">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 flex items-center justify-center rounded-full border-2 border-[#6b3030]">
+            <img src="/foto/box.png" alt="Siap Kirim" class="w-10 h-10" />
+          </div>
+          <p class="mt-2 text-sm font-semibold">Pesanan siap di kirim</p>
+        </div>
+        <div class="flex-grow h-1 bg-green-500 mx-2"></div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 flex items-center justify-center rounded-full border-2 border-[#6b3030]">
+            <img src="/foto/fast-delivery (1).png" alt="Dikirim" class="w-10 h-10" />
+          </div>
+          <p class="mt-2 text-sm font-semibold">Pesanan Dikirim</p>
+        </div>
+        <div class="flex-grow h-1 bg-green-500 mx-2"></div>
+        <div class="flex flex-col items-center text-center">
+          <div class="w-16 h-16 flex items-center justify-center rounded-full border-2 border-[#6b3030]">
+            <img src="/foto/finish.png" alt="Selesai" class="w-10 h-10" />
+          </div>
+          <p class="mt-2 text-sm font-semibold">Pesanan Selesai</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="p-4 bg-[#e3c2b1] sm:p-6">
+    <div class="mx-auto max-w-screen-xl md:flex md:justify-between text-white">
+      <div class="max-w-md">
+        <h1 class="text-4xl font-extrabold drop-shadow-md mb-4">matchiww</h1>
+        <p class="text-base leading-relaxed font-medium">
+          Di setiap helai jilbab Matchiww,<br />
+          kami merajut kenyamanan dan <br />
+          keanggunan untuk menemani <br />
+          langkahmu.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-4">social media</h3>
+        <div class="flex items-center gap-2 mb-2"><img src="/foto/instagram.png" class="w-6 h-6" /><span>@matchiww_</span></div>
+        <div class="flex items-center gap-2 mb-2"><img src="/foto/tiktok.png" class="w-6 h-6" /><span>@matchiww_</span></div>
+        <div class="flex items-center gap-2 mb-2"><img src="/foto/X.png" class="w-6 h-6" /><span>@matchiww_</span></div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-4">marketplace</h3>
+        <div class="flex items-center gap-2 mb-2"><img src="/foto/shopee.png" class="w-6 h-6" /><span>@matchiww_</span></div>
+        <div class="flex items-center gap-2 mb-2"><img src="/foto/tokopedia.png" class="w-6 h-6" /><span>@matchiww_</span></div>
+        <div class="flex items-center gap-2 mb-2"><img src="/foto/lazada.png" class="w-6 h-6" /><span>@matchiww_</span></div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-4">contact us</h3>
+        <p class="mb-2">Jalan Margonda Raya.</p>
+        <p class="mb-2">Whatsapp:<br />08260708121108</p>
+        <p>Email:<br />MatchiwwOfficial@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="detail.js"></script>
+</body>
+</html>

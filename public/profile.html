@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link href="../dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-[#6b3030] font-sans min-h-screen py-10 px-6">
+
+  <div class="flex items-center space-x-4 mb-10">
+    <h1 class="text-4xl font-bold italic text-[#6b3030]">Profile</h1>
+  </div>
+
+  <div class="flex flex-col md:flex-row justify-center max-w-6xl mx-auto">
+
+    <div class="flex flex-col items-center space-y-4 md:pt-28">
+      <div class="relative w-28 h-28 rounded-full border-2 border-black overflow-hidden shadow-md">
+        <img src="/foto/profilee.png" alt="Avatar" class="w-full h-full object-cover" />
+      </div>
+      <div class="space-x-2">
+        <button id="editBtn" onclick="enableEdit()" class="bg-[#a56f6f] text-white px-5 py-2 rounded-full text-sm shadow-md hover:bg-[#925c5c] transition">
+          Edit Profile
+        </button>
+        <button id="saveBtn" onclick="saveEdit()" style="display: none;" class="bg-green-600 text-white px-5 py-2 rounded-full text-sm shadow-md hover:bg-green-700 transition">
+          Simpan
+        </button>
+      </div>
+    </div>
+
+    <div class="w-full max-w-md space-y-6 mt-10 md:mt-0 md:ml-14">
+      <div class="bg-[#f9f6f6] rounded-xl shadow-md px-6 py-4">
+        <h2 class="font-bold text-xl mb-1">UserName</h2>
+        <p class="text-sm text-gray-500" data-editable>@sweatyberry</p>
+      </div>
+      <div class="bg-[#f9f6f6] rounded-xl shadow-md px-6 py-4">
+        <h2 class="font-bold text-xl mb-1">Email</h2>
+        <p class="text-sm text-gray-500" data-editable>sweatyberry@gmail.com</p>
+      </div>
+      <div class="bg-[#f9f6f6] rounded-xl shadow-md px-6 py-4">
+        <h2 class="font-bold text-xl mb-1 lowercase">password</h2>
+        <p class="text-sm text-gray-500" data-editable>********</p>
+      </div>
+      <div class="bg-[#f9f6f6] rounded-xl shadow-md px-6 py-4">
+        <h2 class="font-bold text-xl mb-1 lowercase">location</h2>
+        <p class="text-sm text-gray-500" data-editable>Depok, Jawa Barat</p>
+      </div>
+      <div class="bg-[#f9f6f6] rounded-xl shadow-md px-6 py-4">
+        <h2 class="font-bold text-xl mb-1">Phone Number</h2>
+        <p class="text-sm text-gray-500" data-editable>08260708121108</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

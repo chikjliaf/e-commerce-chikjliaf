@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+            <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                <h1 class="text-2xl font-semibold text-[#8a4d52] mb-1">Welcome!</h1>
+    <p class="text-sm text-black mb-6">Log in to your account to continue!</p>
+            </div> 
+      </section>
+
+<form class="max-w-sm mx-auto">
+    <div class="mb-5">
+      <label for="email" class="block mb-2 text-sm font-medium text-[#8a4d52] dark:text-white">Email</label>
+      <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
+    </div>
+    <div class="mb-5">
+      <label for="password" class="block mb-2 text-sm font-medium text-[#8a4d52] dark:text-white">Password</label>
+      <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+    </div>
+    <div class="flex items-start mb-5">
+  <a href="register.html" class="ms-2 text-sm font-medium text-[#8a4d52] dark:text-gray-300 hover:underline">
+    already have account? register
+  </a>
+</div>
+   
+    <button onclick="window.location.href='home.html'" type="submit"
+        class="w-full bg-[#b67373] text-white font-semibold py-2.5 rounded-xl shadow-[0_4px_0_#8a4d52]">
+        Login
+      </button>
+      <p class="text-center text-sm text-gray-500">or continue with</p>
+
+<div class="flex justify-center space-x-4 mt-1">
+        <button class="w-10 h-10 flex items-center justify-center bg-white rounded-md shadow-md">
+          <img src="/foto/google.png" alt="Google" class="w-5 h-5">
+        </button>
+        <button class="w-10 h-10 flex items-center justify-center bg-white rounded-md shadow-md">
+          <img src="/foto/facebook.png" alt="Facebook" class="w-5 h-5">
+        </button>
+      </div>
+    </form>
+  </div>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+</body>
+</html>

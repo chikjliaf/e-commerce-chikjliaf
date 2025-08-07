@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matchiww</title>
+  <link href="../dist/output.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#f9efec] text-[#6b3030]">
+
+  <nav class="fixed w-full z-50 bg-[#e3c2b1]/90 backdrop-blur-md shadow-sm">
+    <div class="flex items-center justify-between px-6 py-4 max-w-screen-xl mx-auto">
+      <div class="relative flex items-center w-full max-w-md bg-white rounded-full shadow-md px-5 py-3">
+        <input type="text" id="search"placeholder="mau cari kerudung apa?" class="w-full bg-transparent text-[#6b3030] placeholder-[#6b3030] text-sm outline-none" />
+        <svg class="w-5 h-5 text-[#6b3030]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" stroke-width="2" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2" />
+        </svg>
+      </div>
+
+      <div class="ml-4 flex items-center gap-4">
+        <div class="relative">
+          <a href="keranjang.html" class="relative block">
+  <img src="/foto/keranjang.png" alt="Cart" class="w-6 h-6" />
+  <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-1.5">0</span>
+</a>
+        </div>
+        <div class="relative group">
+         <a href="profile.html" class="w-8 h-8 rounded-full overflow-hidden border-2 border-[#6b3030] focus:outline-none block">
+  <img src="/foto/profile.png" alt="Profil" class="w-full h-full object-cover" />
+</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="pt-32 relative overflow-hidden min-h-screen flex flex-col items-center text-center px-4">
+    <img src="/foto/bunga.png" alt="flower" class="absolute top-10 left-10 w-48 opacity-50" />
+    <img src="/foto/flowers.png" alt="flower" class="absolute top-50 right-50 w-50 opacity-500" />
+    <img src="/foto/blink.png" alt="blink" class="absolute right-20 top-1/3 w-32 rotate-30 opacity-50" />
+    <img src="/foto/karjab.png" alt="jilbab" class="absolute bottom-10 left-5 w-24 opacity-70" />
+    <h1 class="text-5xl md:text-6xl font-playfair text-[#854d4d] mb-6 mt-16">matchiww</h1>
+    <p class="font-alex text-3xl md:text-2xl italic text-[#6b3030] max-w-2xl mt-32">
+      "Berhijab bukan sekedar kewajiban, tapi juga cermin kecantikan hati."
+    </p>
+  </section>
+
+  <section class="bg-white py-12">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">Best Seller</h2>
+      <div id="data-product" class="flex flex-wrap justify-center gap-6"></div>
+    </div>
+  </section>
+
+  <footer class="p-4 bg-[#e3c2b1] sm:p-6 dark:bg-gray-800">
+    <div class="mx-auto max-w-screen-xl">
+      <div class="md:flex md:justify-between">
+        <div class="max-w-md text-white">
+          <h1 class="text-4xl font-extrabold drop-shadow-md mb-4">matchiww</h1>
+          <p class="text-base leading-relaxed font-medium">
+            Di setiap helai jilbab Matchiww,<br />
+            kami merajut kenyamanan dan <br />
+            keanggunan untuk menemani <br />
+            langkahmu.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-white mb-4">social media</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/foto/instagram.png" alt="Instagram" class="w-6 h-6" />
+            <span>@matchiww_</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/foto/tiktok.png" alt="TikTok" class="w-6 h-6" />
+            <span>@matchiww_</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/foto/X.png" alt="X" class="w-6 h-6" />
+            <span>@matchiww_</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-white mb-4">marketplace</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/foto/shopee.png" alt="Shopee" class="w-6 h-6" />
+            <span>@matchiww_</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/foto/tokopedia.png" alt="Tokopedia" class="w-6 h-6" />
+            <span>@matchiww_</span>
+          </div>
+          <div class="flex items-center gap-2 mb-2">
+            <img src="/foto/lazada.png" alt="Lazada" class="w-6 h-6" />
+            <span>@matchiww_</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-white mb-4">contact us</h3>
+          <p class="mb-2">Jalan Margonda Raya.</p>
+          <p class="mb-2">Whatsapp: <br />08260708121108</p>
+          <p>Email: <br />MatchiwwOfficial@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+</body>
+</html>
